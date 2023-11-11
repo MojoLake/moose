@@ -19,5 +19,5 @@ window.onload = function () {
 
 
 function handleClick() {
-    window.location.href="./game/game.html";
+    window.location.href="./image_distortion/index2.html";
 }
