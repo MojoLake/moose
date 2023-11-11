@@ -8,7 +8,7 @@ window.onload = function () {
             // if (t.target.parentElement.getAttribute('data-position') != null) document.getElementById('data').innerHTML = t.target.parentElement.getAttribute('data-position');
             if (orange[i] == 1) {
                 orange[i] = 0;
-                piece.style.fill = "#56c9d5";
+                piece.style.fill = "#f4f4f4";
             } else {
                 orange[i] = 1;
                 piece.style.fill = "#ff7d16";
@@ -19,5 +19,5 @@ window.onload = function () {
 
 
 function handleClick() {
-    window.location.href="./game/game.html"
+    window.location.href="./game/game.html";
 }
