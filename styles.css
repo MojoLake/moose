@@ -1,0 +1,55 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #34495e;
+  margin-bottom: 1em;
+}
+
+#moose {
+  width: 100%; /* Makes the image large and responsive */
+  max-width: 500px; /* Maximum size of the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow for depth */
+  cursor: pointer; /* Changes cursor to pointer to indicate it's clickable */
+}
+
+/* Add more styles as needed */
+/* Transition fade class */
+.fade-out {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+/* Trigger fade out */
+.trigger-fade {
+  opacity: 0;
+}
