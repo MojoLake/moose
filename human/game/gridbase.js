@@ -6,7 +6,7 @@ class GridSystem {
 		this.topContext = this.#getContext(0, 0, "#111", true);
 		this.cellSize = 40;
 		this.padding = 2;
-		this.player = { x: playerX, y: playerY, color: "orange" };
+		this.player = { x: playerX, y: playerY, color: "white" };
 		this.matrix[playerY][playerX] = 2;
 
 		document.addEventListener("keydown", this.#movePlayer);
@@ -97,10 +97,10 @@ class GridSystem {
 		for (let row = 0; row < this.matrix.length; row ++) {
 			for (let col = 0; col < this.matrix[row].length; col ++) {
 				const cellVal = this.matrix[row][col];
-				let color = "#111";
+				let color = "#808080";
 
 				if (cellVal === 1) {
-					color = "#4488FF";
+					color = "#4843B6";
 				} else if (cellVal === 2) {
 					color = this.player.color;
 				}
@@ -119,8 +119,8 @@ class GridSystem {
 }
 
 const gridMatrix = [
-	[1, 1, 1, 1, 1, 1, 1],
-	[1, 0, 0, 0, 0, 0, 1],
+	[1, 1, 1, 1, 1, 1, 0, 1],
+	[1, 0, 0, 0, 0, 0, 0, 1],
 	[1, 0, 0, 0, 0, 0, 1],
 	[1, 0, 0, 0, 0, 0, 1],
 	[1, 0, 1, 1, 1, 0, 1],
