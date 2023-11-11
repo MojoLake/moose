@@ -445,7 +445,7 @@
           canvas.style.marginTop = margin + "px";
           canvas.style.marginBottom = margin + "px";
           canvas.style.marginLeft = 0 + "px";
-          canvas.style.marginRight = 0 + "px";
+          canvas.style.marginRight = o + "px";
         }
       
         //3. Remove any padding from the canvas  and body and set the canvas
