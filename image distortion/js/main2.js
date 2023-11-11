@@ -343,7 +343,7 @@
         // CLICK
         if ( options.interactionEvent === 'hover' || options.interactionEvent === 'both'  ) {
             
-          slidesContainer.pointerout = function( mouseData ){
+          slidesContainer.pointerdown = function( mouseData ){
             if ( options.dispatchPointerOver === true ) {
               TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0, onComplete: function() {
                 TweenMax.to( displacementFilter.scale, 1, { x: 20, y: 20  });        
