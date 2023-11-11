@@ -324,16 +324,16 @@
         slidesContainer.buttonMode  = true;       
 
         // HOVER
-        if ( options.interactionEvent === 'hover' || options.interactionEvent === 'both'  )  {
+        if ( options.interactionEvent === 'click' || options.interactionEvent === 'both'  )  {
             
-          slidesContainer.pointerover = function( mouseData ){
+          slidesContainer.pointerup = function( mouseData ){
             mouseX = mouseData.data.global.x;
             mouseY = mouseData.data.global.y;   
             TweenMax.to( displacementFilter.scale, 1, { x: "+=" + Math.sin( mouseX ) * 100 + "", y: "+=" + Math.cos( mouseY ) * 100 + ""  });   
             rotateSpite();
           };      
 
-          slidesContainer.pointerout = function( mouseData ){
+          slidesContainer.pointerdown = function( mouseData ){
             TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0 });
             cancelAnimationFrame( rafID );
           };     
@@ -341,9 +341,9 @@
         }
       
         // CLICK
-        if ( options.interactionEvent === 'click' || options.interactionEvent === 'both'  ) {
+        if ( options.interactionEvent === 'hover' || options.interactionEvent === 'both'  ) {
             
-          slidesContainer.pointerup = function( mouseData ){
+          slidesContainer.pointerout = function( mouseData ){
             if ( options.dispatchPointerOver === true ) {
               TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0, onComplete: function() {
                 TweenMax.to( displacementFilter.scale, 1, { x: 20, y: 20  });        
@@ -355,7 +355,7 @@
 
           };     
 
-          slidesContainer.pointerdown = function( mouseData ){
+          slidesContainer.pointerover = function( mouseData ){
             mouseX = mouseData.data.global.x;
             mouseY = mouseData.data.global.y;         
             TweenMax.to( displacementFilter.scale, 1, { x: "+=" + Math.sin( mouseX ) * 1200 + "", y: "+=" + Math.cos( mouseY ) * 200 + ""  });   
