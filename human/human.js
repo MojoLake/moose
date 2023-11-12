@@ -19,5 +19,8 @@ window.onload = function () {
 
 
 function handleClick() {
-    window.location.href="./image_distortion/index2.html";
+    document.body.classList.add('fade-out', 'trigger-fade');
+    setTimeout(() => {
+        window.location.href="./image_distortion/index2.html";
+    }, 800);
 }

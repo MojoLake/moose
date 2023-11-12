@@ -150,3 +150,13 @@ h2 {
     width: 400px;
     padding: 25px;
 }
+
+.fade-out {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+/* Trigger fade out */
+.trigger-fade {
+  opacity: 0;
+}
