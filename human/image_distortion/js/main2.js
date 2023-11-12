@@ -339,7 +339,7 @@
           };     
           
         }
-      
+        
         // CLICK
         if ( options.interactionEvent === 'hover' || options.interactionEvent === 'both'  ) {
             
@@ -353,7 +353,14 @@
               cancelAnimationFrame( rafID );
             }
 
+            slidesContainer.pointerup = function( mouseData ){
+              mouseX = mouseData.data.global.x;
+              mouseY = mouseData.data.global.y;         
+              TweenMax.to( displacementFilter.scale, 1, { x: "+=" + Math.sin( mouseX ) * 1200 + "", y: "+=" + Math.cos( mouseY ) * 200 + ""  });   
+            };     
+
           };     
+          
 
           slidesContainer.pointerover = function( mouseData ){
             mouseX = mouseData.data.global.x;
@@ -482,3 +489,18 @@
   
 
   })(); 
+
+function getRandomString(stringsArray) {
+    const randomIndex = Math.floor(Math.random()*stringsArray.length);
+    return stringsArray[randomIndex];
+  }
+  
+// Example usage
+const myStrings = ["music/test.mp3", "music/lofi.mp3"];
+const randomString = getRandomString(myStrings);
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const wht = document.getElementById('pata');
+  wht.src = randomString;
+  wht.play()
+});
